@@ -39,7 +39,7 @@ export default function HeroSection() {
           </h1>
         </TextReveal>
         <TextReveal delay={0.4}>
-          <h1 className="font-syne text-hero font-extrabold text-foreground -mt-4 md:-mt-8 drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
+          <h1 className="font-syne text-hero font-extrabold text-background [-webkit-text-stroke:1px_hsl(var(--foreground)/0.3)]">
             TALENT.
           </h1>
         </TextReveal>
