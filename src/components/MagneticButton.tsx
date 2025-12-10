@@ -39,11 +39,15 @@ export default function MagneticButton({ children, className = '', onClick }: Ma
       onClick={onClick}
     >
       <motion.div 
-        className="magnetic-button-inner w-40 h-40 md:w-48 md:h-48 cursor-pointer"
+        className="relative w-40 h-40 md:w-48 md:h-48 cursor-pointer flex items-center justify-center rounded-full border-2 border-foreground/30 overflow-hidden"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <span className="font-syne text-lg md:text-xl font-bold tracking-wider uppercase">
+        {/* Moving gradient background */}
+        <div className="absolute inset-0 bg-background">
+          <div className="absolute inset-0 animate-shimmer bg-gradient-to-r from-background via-muted/50 to-background bg-[length:200%_100%]" />
+        </div>
+        <span className="relative z-10 font-syne text-lg md:text-xl font-bold tracking-wider uppercase text-foreground">
           {children}
         </span>
       </motion.div>
