@@ -24,13 +24,13 @@ export default function HorizontalScrollSection() {
   return (
     <section 
       ref={containerRef}
-      className="relative h-[300vh]"
+      className="relative h-[300vh] bg-background"
     >
       <motion.div 
         className="sticky top-0 h-screen flex items-center overflow-hidden"
         style={{ backgroundColor }}
       >
-        <motion.p 
+        <motion.p
           className="absolute top-8 left-8 text-xs font-satoshi tracking-[0.3em] text-muted-foreground uppercase z-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

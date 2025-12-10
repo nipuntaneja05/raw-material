@@ -19,6 +19,7 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         "background-soft": "hsl(var(--background-soft))",
+        "background-secondary": "hsl(var(--background-secondary))",
         foreground: "hsl(var(--foreground))",
         chrome: "hsl(var(--chrome))",
         "chrome-dark": "hsl(var(--chrome-dark))",

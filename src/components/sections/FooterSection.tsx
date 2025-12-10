@@ -6,67 +6,143 @@ export default function FooterSection() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    company: [
+      { label: 'About', href: '#' },
+      { label: 'Manifesto', href: '#manifesto' },
+      { label: 'Apply', href: '#application' },
+    ],
+    social: [
+      { label: 'Twitter', href: '#' },
+      { label: 'LinkedIn', href: '#' },
+      { label: 'Email', href: 'mailto:hello@buildersgrant.com' },
+    ],
+    legal: [
+      { label: 'Terms of Service', href: '#' },
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Cookie Policy', href: '#' },
+    ],
+  };
+
   return (
-    <footer className="min-h-[60vh] flex flex-col justify-between py-16 px-8 md:px-16 lg:px-24 border-t border-border">
-      <div className="flex-1 flex items-center justify-center">
-        <motion.h2 
-          className="font-syne text-display md:text-hero font-extrabold text-foreground text-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          viewport={{ once: true }}
-        >
-          BUILDERS
-          <br />
-          GRANT.
-        </motion.h2>
-      </div>
+    <footer className="bg-background border-t border-border">
+      {/* Main Footer Content */}
+      <div className="py-20 px-8 md:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto">
+          {/* Large Brand Name */}
+          <motion.h2 
+            className="font-syne text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-20 text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            viewport={{ once: true }}
+          >
+            BUILDERS
+            <br />
+            GRANT.
+          </motion.h2>
 
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        {/* Links */}
-        <motion.nav 
-          className="flex gap-8 md:gap-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          {['Manifesto', 'Twitter', 'Email'].map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="font-satoshi text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase tracking-wider"
+          {/* Links Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
+            {/* Company */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              {link}
-            </a>
-          ))}
-        </motion.nav>
+              <h4 className="font-satoshi text-xs tracking-[0.2em] text-muted-foreground uppercase mb-6">
+                Company
+              </h4>
+              <nav className="flex flex-col gap-4">
+                {footerLinks.company.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="font-satoshi text-sm text-foreground/80 hover:text-foreground transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </motion.div>
 
-        {/* Back to Top */}
-        <motion.button
-          onClick={scrollToTop}
-          className="group flex items-center gap-3 font-satoshi text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase tracking-wider"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          viewport={{ once: true }}
-          whileHover={{ y: -2 }}
-        >
-          <span>Back to top</span>
-          <ArrowUp className="w-4 h-4 transition-transform group-hover:-translate-y-1" />
-        </motion.button>
+            {/* Social */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-satoshi text-xs tracking-[0.2em] text-muted-foreground uppercase mb-6">
+                Connect
+              </h4>
+              <nav className="flex flex-col gap-4">
+                {footerLinks.social.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="font-satoshi text-sm text-foreground/80 hover:text-foreground transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </motion.div>
+
+            {/* Legal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h4 className="font-satoshi text-xs tracking-[0.2em] text-muted-foreground uppercase mb-6">
+                Legal
+              </h4>
+              <nav className="flex flex-col gap-4">
+                {footerLinks.legal.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="font-satoshi text-sm text-foreground/80 hover:text-foreground transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+            </motion.div>
+          </div>
+
+          {/* Back to Top */}
+          <motion.button
+            onClick={scrollToTop}
+            className="group flex items-center gap-3 font-satoshi text-xs text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase tracking-wider mx-auto mb-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -2 }}
+          >
+            <span>Back to top</span>
+            <ArrowUp className="w-4 h-4 transition-transform group-hover:-translate-y-1" />
+          </motion.button>
+        </div>
       </div>
 
-      {/* Copyright */}
-      <motion.p 
-        className="text-xs font-satoshi text-muted-foreground/40 text-center mt-16"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        © 2024 The Builders Grant. All rights reserved.
-      </motion.p>
+      {/* Bottom Bar */}
+      <div className="border-t border-border py-6 px-8 md:px-16 lg:px-24">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs font-satoshi text-muted-foreground/60">
+            © {currentYear} The Builders Grant. All rights reserved.
+          </p>
+          <p className="text-xs font-satoshi text-muted-foreground/40">
+            Built with obsession.
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }

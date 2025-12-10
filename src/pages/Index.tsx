@@ -6,6 +6,7 @@ import HorizontalScrollSection from '@/components/sections/HorizontalScrollSecti
 import GrantSpecsSection from '@/components/sections/GrantSpecsSection';
 import FeaturedBuildersSection from '@/components/sections/FeaturedBuildersSection';
 import ApplicationSection from '@/components/sections/ApplicationSection';
+import CoFoundersSection from '@/components/sections/CoFoundersSection';
 import FooterSection from '@/components/sections/FooterSection';
 
 const LiquidMetalScene = lazy(() => import('@/components/LiquidMetalScene'));
@@ -30,6 +31,7 @@ const Index = () => {
           <GrantSpecsSection />
           <FeaturedBuildersSection />
           <ApplicationSection />
+          <CoFoundersSection />
           <FooterSection />
         </div>
       </main>

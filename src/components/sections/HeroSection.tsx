@@ -34,12 +34,12 @@ export default function HeroSection() {
       {/* Main Hero Text */}
       <div className="relative z-10 text-center px-4">
         <TextReveal delay={0.2}>
-          <h1 className="font-syne text-hero font-extrabold text-foreground">
+          <h1 className="font-syne text-hero font-extrabold text-foreground drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
             RAW.
           </h1>
         </TextReveal>
         <TextReveal delay={0.4}>
-          <h1 className="font-syne text-hero font-extrabold text-foreground -mt-4 md:-mt-8">
+          <h1 className="font-syne text-hero font-extrabold text-foreground -mt-4 md:-mt-8 drop-shadow-[0_4px_30px_rgba(0,0,0,0.8)]">
             TALENT.
           </h1>
         </TextReveal>
