@@ -13,7 +13,8 @@ export default function ManifestoSection() {
   return (
     <section 
       ref={containerRef}
-      className="min-h-screen flex items-center py-32 px-8 md:px-16 lg:px-24"
+      id="manifesto"
+      className="min-h-screen flex items-center py-32 px-8 md:px-16 lg:px-24 bg-background/95 backdrop-blur-sm"
     >
       <div className="max-w-5xl mx-auto">
         <motion.p 
