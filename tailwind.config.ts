@@ -55,6 +55,7 @@ export default {
       fontFamily: {
         syne: ["Syne", "sans-serif"],
         satoshi: ["Satoshi", "sans-serif"],
+        
       },
       fontSize: {
         "hero": ["clamp(4rem, 12vw, 14rem)", { lineHeight: "0.9", letterSpacing: "-0.04em" }],
