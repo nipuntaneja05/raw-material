@@ -24,7 +24,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         // 2. SEND EMAIL (With Error Checking!)
         const { data, error } = await resend.emails.send({
-            from: 'Builders Grant <team@send.buildersgrant.com>',
+            from: 'Builders Grant <team@buildersgrant.com>',
             to: [email],
             subject: 'Welcome to the Waitlist! 🚀',
             html: `<p>Hi ${name || 'there'},</p><p>Thanks for joining our waitlist! We will be in touch soon.</p>`,
