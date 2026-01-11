@@ -22,11 +22,11 @@ export default function HorizontalScrollSection() {
   );
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative h-[300vh] bg-background"
     >
-      <motion.div 
+      <motion.div
         className="sticky top-0 h-screen flex items-center overflow-hidden"
         style={{ backgroundColor }}
       >
@@ -36,19 +36,19 @@ export default function HorizontalScrollSection() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          The Anti-VC
+          The STRUCTURE
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex"
           style={{ x }}
         >
           {slides.map((slide, i) => (
-            <div 
+            <div
               key={i}
               className="w-screen h-screen flex flex-col items-center justify-center px-8"
             >
-              <motion.span 
+              <motion.span
                 className="text-xs font-satoshi tracking-[0.3em] text-muted-foreground mb-8 uppercase"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

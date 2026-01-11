@@ -17,7 +17,7 @@ const Index = () => {
       <main className="relative bg-background text-foreground">
         {/* Noise Overlay */}
         <div className="noise-overlay" />
-        
+
         {/* 3D Background */}
         <Suspense fallback={null}>
           <LiquidMetalScene />
@@ -29,7 +29,7 @@ const Index = () => {
           <ManifestoSection />
           <HorizontalScrollSection />
           <GrantSpecsSection />
-          <FeaturedBuildersSection />
+          {/* <FeaturedBuildersSection /> */}
           <ApplicationSection />
           <CoFoundersSection />
           <FooterSection />
