@@ -2,17 +2,17 @@ import { motion } from 'framer-motion';
 import TextReveal from '../TextReveal';
 
 const specs = [
-  { number: "01", title: "The Cash.", value: "₹30k Grant.", description: "No strings attached." },
-  { number: "02", title: "The Network.", value: "Direct access.", description: "To founders who shipped." },
-  { number: "03", title: "The Speed.", value: "72h Turnaround.", description: "We move fast." },
-  { number: "04", title: "The Platform.", value: "10k+ Users.", description: "Showcase your work." },
+  { number: "01", title: "The Cash.", value: "₹5k Grant.", description: "No strings attached." },
+  { number: "02", title: "The Network.", value: "Direct access.", description: "To top industry mentors." },
+  { number: "03", title: "The Community .", value: "Real Builders .", description: "To help you become 10X." },
+  { number: "04", title: "The Visibility .", value: "Public Proofing .", description: "Showcase your work." },
 ];
 
 export default function GrantSpecsSection() {
   return (
     <section className="min-h-screen py-32 px-8 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto">
-        <motion.p 
+        <motion.p
           className="text-xs font-satoshi tracking-[0.3em] text-muted-foreground mb-16 uppercase"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -36,17 +36,17 @@ export default function GrantSpecsSection() {
                 <span className="text-xs font-satoshi tracking-[0.3em] text-muted-foreground group-hover:text-background/60 transition-colors duration-300">
                   {spec.number}
                 </span>
-                
+
                 <TextReveal delay={i * 0.1} className="mt-4">
                   <h3 className="font-syne text-xl md:text-2xl font-bold text-foreground group-hover:text-background transition-colors duration-300">
                     {spec.title}
                   </h3>
                 </TextReveal>
-                
+
                 <h4 className="font-syne text-title font-extrabold text-foreground group-hover:text-background transition-colors duration-300 mt-4">
                   {spec.value}
                 </h4>
-                
+
                 <p className="font-satoshi text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-300 mt-4">
                   {spec.description}
                 </p>

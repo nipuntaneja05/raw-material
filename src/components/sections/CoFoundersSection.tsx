@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 const founders = [
   {
     name: "Jahanvi Taneja",
-    role: "Co-Founder",
+    role: "",
     image: "/placeholder.svg"
   },
   {
     name: "Nipun Taneja",
-    role: "Co-Founder",
+    role: "",
     image: "/placeholder.svg"
   }
 ];
@@ -17,7 +17,7 @@ export default function CoFoundersSection() {
   return (
     <section className="py-32 px-8 md:px-16 lg:px-24 bg-background-secondary">
       <div className="max-w-6xl mx-auto">
-        <motion.p 
+        <motion.p
           className="text-xs font-satoshi tracking-[0.3em] text-muted-foreground mb-8 uppercase text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -27,7 +27,7 @@ export default function CoFoundersSection() {
           Ran By
         </motion.p>
 
-        <motion.h2 
+        <motion.h2
           className="font-syne text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,10 +44,10 @@ export default function CoFoundersSection() {
               className="flex flex-col items-center"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ 
-                duration: 0.8, 
+              transition={{
+                duration: 0.8,
                 delay: index * 0.2,
-                ease: [0.16, 1, 0.3, 1] 
+                ease: [0.16, 1, 0.3, 1]
               }}
               viewport={{ once: true }}
             >

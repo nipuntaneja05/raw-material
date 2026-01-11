@@ -30,7 +30,7 @@ const Index = () => {
           <HorizontalScrollSection />
           <GrantSpecsSection />
           {/* <FeaturedBuildersSection /> */}
-          <ApplicationSection />
+          {/* <ApplicationSection /> */}
           <CoFoundersSection />
           <FooterSection />
         </div>
