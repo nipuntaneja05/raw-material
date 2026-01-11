@@ -2,14 +2,16 @@ import { motion } from 'framer-motion';
 
 const founders = [
   {
-    name: "Jahanvi Taneja",
+    name: "Jahanvi",
     role: "",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
+    linkedin: "https://www.linkedin.com/in/jahanvi-taneja-206345166/"
   },
   {
-    name: "Nipun Taneja",
+    name: "Nipun",
     role: "",
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
+    linkedin: "https://linkedin.com/in/nipun-taneja-88b798288/"
   }
 ];
 
@@ -52,21 +54,25 @@ export default function CoFoundersSection() {
               viewport={{ once: true }}
             >
               {/* Image Placeholder */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 mb-8 group">
+              {/* <div className="relative w-48 h-48 md:w-56 md:h-56 mb-8 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-muted/20 to-muted/5 rounded-full" />
                 <div className="w-full h-full rounded-full overflow-hidden border border-border bg-muted/10 flex items-center justify-center">
                   <div className="text-muted-foreground/50 font-satoshi text-sm tracking-wider uppercase">
                     Photo
                   </div>
                 </div>
-                {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-full bg-foreground/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
+              </div> */}
 
               {/* Name */}
-              <h3 className="font-syne text-2xl md:text-3xl font-bold text-foreground mb-2 text-center">
+              <a
+                href={founder.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-syne text-2xl md:text-3xl font-bold text-foreground mb-2 text-center hover:text-primary transition-colors duration-300 cursor-pointer underline decoration-2 underline-offset-4 hover:decoration-primary"
+              >
                 {founder.name}
-              </h3>
+              </a>
 
               {/* Role */}
               <p className="font-satoshi text-sm text-muted-foreground tracking-wider uppercase">

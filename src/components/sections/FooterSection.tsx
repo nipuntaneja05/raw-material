@@ -12,18 +12,18 @@ export default function FooterSection() {
     company: [
       { label: 'About', href: '#' },
       { label: 'Manifesto', href: '#manifesto' },
-      { label: 'Apply', href: '#application' },
+      // { label: 'Apply', href: '#application' },
     ],
     social: [
-      { label: 'Twitter', href: '#' },
-      { label: 'LinkedIn', href: '#' },
-      { label: 'Email', href: 'mailto:hello@buildersgrant.com' },
+      { label: 'Twitter', href: 'https://x.com/buildersgrant' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/company/builders-grant/?viewAsMember=true' },
+      // { label: 'Email', href: 'mailto:hello@buildersgrant.com' },
     ],
-    legal: [
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
-      { label: 'Cookie Policy', href: '#' },
-    ],
+    // legal: [
+    //   { label: 'Terms of Service', href: '#' },
+    //   { label: 'Privacy Policy', href: '#' },
+    //   { label: 'Cookie Policy', href: '#' },
+    // ],
   };
 
   return (
@@ -32,7 +32,7 @@ export default function FooterSection() {
       <div className="py-20 px-8 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
           {/* Large Brand Name */}
-          <motion.h2 
+          <motion.h2
             className="font-syne text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-20 text-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function FooterSection() {
           </motion.h2>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 mb-16">
             {/* Company */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export default function FooterSection() {
             </motion.div>
 
             {/* Legal */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -113,7 +113,7 @@ export default function FooterSection() {
                   </a>
                 ))}
               </nav>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Back to Top */}
