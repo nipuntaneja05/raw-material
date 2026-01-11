@@ -13,14 +13,14 @@ export default function MagneticButton({ children, className = '', onClick }: Ma
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
-    
+
     const rect = ref.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
-    
+
     const x = (e.clientX - centerX) * 0.3;
     const y = (e.clientY - centerY) * 0.3;
-    
+
     setPosition({ x, y });
   };
 
@@ -38,8 +38,8 @@ export default function MagneticButton({ children, className = '', onClick }: Ma
       transition={{ type: "spring", stiffness: 150, damping: 15 }}
       onClick={onClick}
     >
-      <motion.div 
-        className="relative w-40 h-40 md:w-48 md:h-48 cursor-pointer flex items-center justify-center rounded-full border-2 border-foreground/30 overflow-hidden"
+      <motion.div
+        className="relative w-32 h-32 md:w-36 md:h-36 cursor-pointer flex items-center justify-center rounded-full border-2 border-foreground/30 overflow-hidden"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
