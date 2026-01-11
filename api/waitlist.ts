@@ -15,27 +15,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             return res.status(400).json({ error: 'Email is required' });
         }
 
-        // 1. SAVE THE USER (This was missing!)
-        // This adds them to your Resend "Audience" list automatically.
+        // 1. ADD CONTACT
         await resend.contacts.create({
             email: email,
             firstName: name || '',
             unsubscribed: false,
         });
 
-        // 2. SEND THE EMAIL (Updated to your real domain)
-        await resend.emails.send({
-            // Use your 'send' subdomain you just verified:
+        // 2. SEND EMAIL (With Error Checking!)
+        const { data, error } = await resend.emails.send({
             from: 'Builders Grant <team@send.buildersgrant.com>',
-            to: email,
+            to: [email],
             subject: 'Welcome to the Waitlist! 🚀',
             html: `<p>Hi ${name || 'there'},</p><p>Thanks for joining our waitlist! We will be in touch soon.</p>`,
         });
 
-        return res.status(200).json({ success: true });
+        // 🛑 STOP HERE if Resend gave an error
+        if (error) {
+            console.error("Resend Error:", error);
+            return res.status(400).json({ error: error.message });
+        }
 
-    } catch (error) {
-        console.error('Waitlist error:', error);
-        return res.status(500).json({ error: 'Failed to join waitlist' });
+        // Only return success if both steps worked
+        return res.status(200).json({ success: true, id: data?.id });
+
+    } catch (err: any) {
+        console.error('Server Error:', err);
+        return res.status(500).json({ error: err.message });
     }
 }
