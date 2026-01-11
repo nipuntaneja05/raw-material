@@ -45,13 +45,14 @@ export default function FooterSection() {
           </motion.h2>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 mb-16">
+          <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-8 mb-16 max-w-5xl mx-auto w-full">
             {/* Company */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-left"
             >
               <h4 className="font-satoshi text-xs tracking-[0.2em] text-muted-foreground uppercase mb-6">
                 Company
@@ -75,11 +76,12 @@ export default function FooterSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
               viewport={{ once: true }}
+              className="text-left md:text-right"
             >
               <h4 className="font-satoshi text-xs tracking-[0.2em] text-muted-foreground uppercase mb-6">
                 Connect
               </h4>
-              <nav className="flex flex-col gap-4">
+              <nav className="flex flex-col gap-4 md:items-end">
                 {footerLinks.social.map((link) => (
                   <a
                     key={link.label}
