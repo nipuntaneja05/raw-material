@@ -29,11 +29,11 @@ export default function FooterSection() {
   return (
     <footer className="bg-background border-t border-border">
       {/* Main Footer Content */}
-      <div className="py-20 px-8 md:px-16 lg:px-24">
+      <div className="py-16 sm:py-20 px-6 sm:px-8 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
           {/* Large Brand Name */}
           <motion.h2
-            className="font-syne text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-20 text-center"
+            className="font-syne text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-foreground mb-12 sm:mb-16 md:mb-20 text-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

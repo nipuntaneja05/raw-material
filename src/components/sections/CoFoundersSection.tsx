@@ -30,7 +30,7 @@ export default function CoFoundersSection() {
         </motion.p>
 
         <motion.h2
-          className="font-syne text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground text-center mb-20"
+          className="font-syne text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground text-center mb-12 sm:mb-16 md:mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

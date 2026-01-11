@@ -68,15 +68,15 @@ export default function HeroSection() {
       </motion.div>
 
       {/* HERO TEXT */}
-      <div className="relative z-10 text-center px-4 mb-12">
+      <div className="relative z-10 text-center px-4 mb-8 md:mb-12">
         <TextReveal delay={0.2}>
-          <h1 className="font-syne font-extrabold tracking-tighter uppercase leading-[0.9] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.8)] text-6xl md:text-8xl lg:text-[8rem]">
+          <h1 className="font-syne font-extrabold tracking-tighter uppercase leading-[0.9] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.8)] text-5xl md:text-7xl lg:text-[8rem]">
             BUILDERS
           </h1>
         </TextReveal>
 
         <TextReveal delay={0.4}>
-          <h1 className="font-syne font-extrabold tracking-tighter uppercase leading-[0.9] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.8)] text-6xl md:text-8xl lg:text-[8rem]">
+          <h1 className="font-syne font-extrabold tracking-tighter uppercase leading-[0.9] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.8)] text-5xl md:text-7xl lg:text-[8rem]">
             GRANT
           </h1>
         </TextReveal>
@@ -126,9 +126,9 @@ export default function HeroSection() {
                 type="submit"
                 disabled={status === "loading"}
                 className="
-                  bg-white text-black font-bold px-6 py-3 rounded-lg
+                  bg-white text-black font-bold px-4 sm:px-6 py-3 rounded-lg
                   hover:bg-neutral-200 transition-colors disabled:opacity-50
-                  font-satoshi tracking-wide
+                  font-satoshi tracking-wide text-sm sm:text-base whitespace-nowrap
                 "
               >
                 {status === "loading" ? "JOINING..." : "JOIN WAITLIST"}

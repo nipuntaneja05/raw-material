@@ -26,7 +26,7 @@ export default function GrantSpecsSection() {
           {specs.map((spec, i) => (
             <motion.div
               key={i}
-              className="grid-cell border-b border-r border-border p-8 md:p-12 lg:p-16 cursor-pointer group"
+              className="grid-cell border-b border-r border-border p-6 sm:p-8 md:p-12 lg:p-16 cursor-pointer group"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
@@ -38,16 +38,16 @@ export default function GrantSpecsSection() {
                 </span>
 
                 <TextReveal delay={i * 0.1} className="mt-4">
-                  <h3 className="font-syne text-xl md:text-2xl font-bold text-foreground group-hover:text-background transition-colors duration-300">
+                  <h3 className="font-syne text-lg sm:text-xl md:text-2xl font-bold text-foreground group-hover:text-background transition-colors duration-300">
                     {spec.title}
                   </h3>
                 </TextReveal>
 
-                <h4 className="font-syne text-title font-extrabold text-foreground group-hover:text-background transition-colors duration-300 mt-4">
+                <h4 className="font-syne text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground group-hover:text-background transition-colors duration-300 mt-4">
                   {spec.value}
                 </h4>
 
-                <p className="font-satoshi text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-300 mt-4">
+                <p className="font-satoshi text-xs sm:text-sm text-muted-foreground group-hover:text-background/70 transition-colors duration-300 mt-4">
                   {spec.description}
                 </p>
               </div>
