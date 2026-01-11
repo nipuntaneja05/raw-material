@@ -26,7 +26,7 @@ export default function CoFoundersSection() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          Ran By
+          Run By
         </motion.p>
 
         <motion.h2
